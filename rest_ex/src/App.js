@@ -6,6 +6,7 @@ import axios from 'axios'
 function App() {
   // const [item, setItem] = useState("");
   const [data, setData] = useState({
+    id: '',
     name: '',
     age: '',
     email: ''
@@ -34,6 +35,10 @@ function App() {
   return (  
     <>
     <form onSubmit={handleSubmit}>
+      <div>
+        <label>Id: </label>
+        <input type="text" name="id" value={data.id} onChange={handleChange} />
+      </div>
       <div>
         <label>Name: </label>
         <input type="text" name="name" value={data.name} onChange={handleChange} />
